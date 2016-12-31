@@ -11,10 +11,14 @@ public class BallController : MonoBehaviour {
     private bool canJump;
     public float jumpPower;
 
+    private CubeExploder exploder;
+
 	void Start () {
 
         rb = GetComponent<Rigidbody>();
         down = new Vector3(0, -1);
+
+        exploder = GameObject.Find("ExplodingCubes").GetComponent<CubeExploder>();
 	}
 	
 	void Update () {
@@ -55,6 +59,16 @@ public class BallController : MonoBehaviour {
         if (Input.GetKey(KeyCode.Space) && canJump)
         {
             rb.AddForce(0, jumpPower, 0, ForceMode.Impulse);
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        ContactPoint contact = collision.contacts[0];
+
+        if (contact.thisCollider.tag == "Player")
+        {
+            exploder.Explode(contact.point);
         }
     }
 }
