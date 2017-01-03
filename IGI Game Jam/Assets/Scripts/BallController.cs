@@ -11,14 +11,16 @@ public class BallController : MonoBehaviour {
     private bool canJump;
     public float jumpPower;
 
-    private CubeExploder exploder;
+    private CubeExploder exploder1;
+    private CubeExploder exploder2;
 
 	void Start () {
 
         rb = GetComponent<Rigidbody>();
         down = new Vector3(0, -1);
 
-        exploder = GameObject.Find("ExplodingCubes").GetComponent<CubeExploder>();
+        exploder1 = GameObject.Find("ExplodingCube 1").GetComponent<CubeExploder>();
+        exploder2 = GameObject.Find("ExplodingCube 2").GetComponent<CubeExploder>();
 	}
 	
 	void Update () {
@@ -66,9 +68,13 @@ public class BallController : MonoBehaviour {
     {
         ContactPoint contact = collision.contacts[0];
 
-        if (contact.thisCollider.tag == "Player")
+        if (contact.otherCollider.tag == "ExplodingCube 1")
         {
-            exploder.Explode(contact.point);
+            exploder1.Explode(contact.point);
+        }
+        else if (contact.otherCollider.tag == "ExplodingCube 2")
+        {
+            exploder2.Explode(contact.point);
         }
     }
 }

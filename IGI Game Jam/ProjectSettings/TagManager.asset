@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - ExplodingCubes
+  - ExplodingCube 1
+  - ExplodingCube 2
+  - GravitySphere
   layers:
   - Default
   - TransparentFX

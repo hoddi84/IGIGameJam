@@ -21,12 +21,15 @@ public class CubeExploder : MonoBehaviour {
         {
             Rigidbody rb = hit.GetComponent<Rigidbody>();
 
-            if (rb != null && rb.tag != "Player")
+            if (rb != null && rb.tag != "Player" && rb.tag != "GravitySphere")
             {
                 rb.AddExplosionForce(explosionForce, explosionPos, explosionRadius, upwardsModifier);
                 hit.GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
-                hit.GetComponent<BoxCollider>().enabled = false;
+                
+                // TODO
+                // examine this with AddExplosionForce().
+                //hit.GetComponent<BoxCollider>().enabled = false;
             }
         }
-    }
+    }  
 }

@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 65471010791104774}
   m_Layer: 0
   m_Name: Cube (5)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 65174532448174124}
   m_Layer: 0
   m_Name: Cube (18)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 65768319217794918}
   m_Layer: 0
   m_Name: Cube (13)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 65560698136574576}
   m_Layer: 0
   m_Name: Cube (7)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 65207081200567502}
   m_Layer: 0
   m_Name: Cube (14)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 65040130903665148}
   m_Layer: 0
   m_Name: Cube (4)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 65188014745070716}
   m_Layer: 0
   m_Name: Cube (15)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 65535798191928518}
   m_Layer: 0
   m_Name: Cube (10)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 114995854307180696}
   m_Layer: 0
   m_Name: ExplodingCubes
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 65098955772780742}
   m_Layer: 0
   m_Name: Cube (8)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 65184175758102610}
   m_Layer: 0
   m_Name: Cube (24)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 65015933541617008}
   m_Layer: 0
   m_Name: Cube (13)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 65518621006767528}
   m_Layer: 0
   m_Name: Cube (20)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 65666418959444484}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 65988113077290440}
   m_Layer: 0
   m_Name: Cube (19)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 65008176818448048}
   m_Layer: 0
   m_Name: Cube (9)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 65176915541528746}
   m_Layer: 0
   m_Name: Cube (12)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 65302067269560464}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 65064676451779140}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 65838313039785772}
   m_Layer: 0
   m_Name: Cube (23)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -402,7 +402,7 @@ GameObject:
   - component: {fileID: 65851162691235186}
   m_Layer: 0
   m_Name: Cube (21)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 65312508661010048}
   m_Layer: 0
   m_Name: explosionCenter
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 65146484040632288}
   m_Layer: 0
   m_Name: Cube (17)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -459,7 +459,7 @@ GameObject:
   - component: {fileID: 65008572067457122}
   m_Layer: 0
   m_Name: Cube (25)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -478,7 +478,7 @@ GameObject:
   - component: {fileID: 65718034072580110}
   m_Layer: 0
   m_Name: Cube (6)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 65446073792341668}
   m_Layer: 0
   m_Name: Cube (22)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -516,7 +516,7 @@ GameObject:
   - component: {fileID: 65565277347857222}
   m_Layer: 0
   m_Name: Cube (11)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -535,7 +535,7 @@ GameObject:
   - component: {fileID: 65916637634444722}
   m_Layer: 0
   m_Name: Cube (16)
-  m_TagString: ExplodingCubes
+  m_TagString: ExplodingCube 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -819,8 +819,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1234611785571408}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.619, y: 1.1667, z: -0.223}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.0853782, y: -1.5419301, z: -3.3352926}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 4192632167811852}
@@ -2697,7 +2697,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fd011e6a9f4c514b8d3809f5614be79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionCenter: {fileID: 1687753011030970}
-  explosionForce: 5
+  explosionForce: 15
   explosionRadius: 0.5
   upwardsModifier: 0
