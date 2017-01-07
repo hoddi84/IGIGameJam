@@ -318,7 +318,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 71, y: 248}
+  m_AnchoredPosition: {x: -146, y: 248}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &378173093
@@ -353,7 +353,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Time Left: '
+  m_Text: 'Time Remaining:'
 --- !u!222 &378173094
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1130,4 +1130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec4350cf0cf36fd409fd370f18be5038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  durationTime: 90
+  timeLeftText: Time Remaining
+  timeOverText: Game Over
   textTimer: {fileID: 378173091}
