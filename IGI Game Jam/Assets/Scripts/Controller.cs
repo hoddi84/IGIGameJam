@@ -19,6 +19,8 @@ public class Controller : MonoBehaviour {
     public bool controlWhite;
     public bool controlBoth;
 
+    private bool controlsActive;
+
     private enum Mode
     {
         Normal,
@@ -30,6 +32,7 @@ public class Controller : MonoBehaviour {
 
         controlWhite = true;
         controlBoth = true;
+        controlsActive = true;
 
         rbBlack = blackPlayer.GetComponent<Rigidbody>();
         rbWhite = whitePlayer.GetComponent<Rigidbody>();
@@ -43,25 +46,28 @@ public class Controller : MonoBehaviour {
 
     void Update()
     {
-        if (controlWhite)
+        if (controlsActive)
         {
-            ControlWhite(Mode.Normal);
-        }
-        else
-        {
-            ControlBlack(Mode.Normal);
-        }
+            if (controlWhite)
+            {
+                ControlWhite(Mode.Normal);
+            }
+            else
+            {
+                ControlBlack(Mode.Normal);
+            }
 
-        if (controlWhite && controlBoth)
-        {
-            ControlWhite(Mode.Normal);
-            ControlBlack(Mode.Opposite);
-        }
+            if (controlWhite && controlBoth)
+            {
+                ControlWhite(Mode.Normal);
+                ControlBlack(Mode.Opposite);
+            }
 
-        if (!controlWhite && controlBoth)
-        {
-            ControlBlack(Mode.Normal);
-            ControlWhite(Mode.Opposite);
+            if (!controlWhite && controlBoth)
+            {
+                ControlBlack(Mode.Normal);
+                ControlWhite(Mode.Opposite);
+            }
         }
     }
 
@@ -147,5 +153,10 @@ public class Controller : MonoBehaviour {
                 tfWhite.position += new Vector3(0, 0, 1) * whiteSpeed * Time.deltaTime;
             }
         }
+    }
+
+    public void DisableControls()
+    {
+        controlsActive = false;
     }
 }

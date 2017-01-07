@@ -8,6 +8,8 @@ TagManager:
   - ExplodingCube 1
   - ExplodingCube 2
   - GravitySphere
+  - WhitePlayer
+  - BlackPlayer
   layers:
   - Default
   - TransparentFX

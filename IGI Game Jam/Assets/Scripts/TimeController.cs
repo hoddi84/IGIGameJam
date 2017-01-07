@@ -64,4 +64,21 @@ public class TimeController : MonoBehaviour {
         yield return new WaitForSeconds(2.0f);
         SceneManager.LoadScene("StartScreen");
     }
+
+    public void GameWon(string msg)
+    {
+        timeOver = true;
+        text.text = msg;
+        StartCoroutine(GameOver());
+    }
+
+    public void IncreaseTime(int time)
+    {
+        endTime += time;
+    }
+
+    public void DecreaseTime(int time)
+    {
+        endTime -= time;
+    }
 }
