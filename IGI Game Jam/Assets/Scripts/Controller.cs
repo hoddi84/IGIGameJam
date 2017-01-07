@@ -41,10 +41,26 @@ public class Controller : MonoBehaviour {
         tfWhite = whitePlayer.GetComponent<Transform>();
 	}
 
-    // Update is called once per frame
-
-
     void Update()
+    {
+
+        if (controlWhite)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                controlWhite = false;
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                controlWhite = true;
+            }
+        }
+    }
+
+    void FixedUpdate()
     {
         if (controlsActive)
         {
@@ -192,5 +208,17 @@ public class Controller : MonoBehaviour {
         controlsActive = false;
         rbWhite.velocity = new Vector3(0, 0, 0);
         rbBlack.velocity = new Vector3(0, 0, 0);
+    }
+
+    public bool ControlingWhite()
+    {
+        if (controlWhite)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
