@@ -10,6 +10,8 @@ TagManager:
   - GravitySphere
   - WhitePlayer
   - BlackPlayer
+  - BluePlayer
+  - GoldPlayer
   layers:
   - Default
   - TransparentFX
