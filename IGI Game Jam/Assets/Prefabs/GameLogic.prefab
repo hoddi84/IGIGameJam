@@ -420,8 +420,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blackPlayer: {fileID: 1536893930334780}
   whitePlayer: {fileID: 1892218425806602}
-  whiteSpeed: 1.5
-  blackSpeed: 1.5
+  whiteSpeed: 2
+  blackSpeed: 2
   controlWhite: 0
   controlBoth: 0
 --- !u!135 &135158740260288210

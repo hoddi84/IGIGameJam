@@ -77,38 +77,54 @@ public class Controller : MonoBehaviour {
         {
             if (Input.GetKey(KeyCode.A))
             {
-                tfBlack.position += new Vector3(-1, 0, 0) * blackSpeed * Time.deltaTime;
+                //tfBlack.position += new Vector3(-1, 0, 0) * blackSpeed * Time.deltaTime;
+                rbBlack.velocity = new Vector3(-1 * blackSpeed, 0, 0);
             }
-            if (Input.GetKey(KeyCode.D))
+            else if (Input.GetKey(KeyCode.D))
             {
-                tfBlack.position += new Vector3(1, 0, 0) * blackSpeed * Time.deltaTime;
+                //tfBlack.position += new Vector3(1, 0, 0) * blackSpeed * Time.deltaTime;
+                rbBlack.velocity = new Vector3(1 * blackSpeed, 0, 0);
             }
-            if (Input.GetKey(KeyCode.W))
+            else if (Input.GetKey(KeyCode.W))
             {
-                tfBlack.position += new Vector3(0, 0, 1) * blackSpeed * Time.deltaTime;
+                //tfBlack.position += new Vector3(0, 0, 1) * blackSpeed * Time.deltaTime;
+                rbBlack.velocity = new Vector3(0, 0, 1 * blackSpeed);
             }
-            if (Input.GetKey(KeyCode.S))
+            else if (Input.GetKey(KeyCode.S))
             {
-                tfBlack.position += new Vector3(0, 0, -1) * blackSpeed * Time.deltaTime;
+                //tfBlack.position += new Vector3(0, 0, -1) * blackSpeed * Time.deltaTime;
+                rbBlack.velocity = new Vector3(0, 0, -1 * blackSpeed);
+            }
+            else
+            {
+                rbBlack.velocity = new Vector3(0, 0, 0);
             }
         }
         else if (mode == Mode.Opposite)
         {
             if (Input.GetKey(KeyCode.A))
             {
-                tfBlack.position += new Vector3(1, 0, 0) * blackSpeed * Time.deltaTime;
+                //tfBlack.position += new Vector3(1, 0, 0) * blackSpeed * Time.deltaTime;
+                rbBlack.velocity = new Vector3(1 * blackSpeed, 0, 0);
             }
-            if (Input.GetKey(KeyCode.D))
+            else if (Input.GetKey(KeyCode.D))
             {
-                tfBlack.position += new Vector3(-1, 0, 0) * blackSpeed * Time.deltaTime;
+                //tfBlack.position += new Vector3(-1, 0, 0) * blackSpeed * Time.deltaTime;
+                rbBlack.velocity = new Vector3(-1 * blackSpeed, 0, 0);
             }
-            if (Input.GetKey(KeyCode.W))
+            else if (Input.GetKey(KeyCode.W))
             {
-                tfBlack.position += new Vector3(0, 0, -1) * blackSpeed * Time.deltaTime;
+                //tfBlack.position += new Vector3(0, 0, -1) * blackSpeed * Time.deltaTime;
+                rbBlack.velocity = new Vector3(0, 0, -1 * blackSpeed);
             }
-            if (Input.GetKey(KeyCode.S))
+            else if (Input.GetKey(KeyCode.S))
             {
-                tfBlack.position += new Vector3(0, 0, 1) * blackSpeed * Time.deltaTime;
+                //tfBlack.position += new Vector3(0, 0, 1) * blackSpeed * Time.deltaTime;
+                rbBlack.velocity = new Vector3(0, 0, 1 * blackSpeed);
+            }
+            else
+            {
+                rbBlack.velocity = new Vector3(0, 0, 0);
             }
         }
     }
@@ -119,38 +135,54 @@ public class Controller : MonoBehaviour {
         {
             if (Input.GetKey(KeyCode.A))
             {
-                tfWhite.position += new Vector3(-1, 0, 0) * whiteSpeed * Time.deltaTime;
+                //tfWhite.position += new Vector3(-1, 0, 0) * whiteSpeed * Time.deltaTime;
+                rbWhite.velocity = new Vector3(-1 * whiteSpeed, 0, 0);
             }
-            if (Input.GetKey(KeyCode.D))
+            else if (Input.GetKey(KeyCode.D))
             {
-                tfWhite.position += new Vector3(1, 0, 0) * whiteSpeed * Time.deltaTime;
+                //tfWhite.position += new Vector3(1, 0, 0) * whiteSpeed * Time.deltaTime;
+                rbWhite.velocity = new Vector3(1 * whiteSpeed, 0, 0);
             }
-            if (Input.GetKey(KeyCode.W))
+            else if (Input.GetKey(KeyCode.W))
             {
-                tfWhite.position += new Vector3(0, 0, 1) * whiteSpeed * Time.deltaTime;
+                //tfWhite.position += new Vector3(0, 0, 1) * whiteSpeed * Time.deltaTime;
+                rbWhite.velocity = new Vector3(0, 0, 1 * whiteSpeed);
             }
-            if (Input.GetKey(KeyCode.S))
+            else if (Input.GetKey(KeyCode.S))
             {
-                tfWhite.position += new Vector3(0, 0, -1) * whiteSpeed * Time.deltaTime;
+                //tfWhite.position += new Vector3(0, 0, -1) * whiteSpeed * Time.deltaTime;
+                rbWhite.velocity = new Vector3(0, 0, -1 * whiteSpeed);
+            }
+            else
+            {
+                rbWhite.velocity = new Vector3(0, 0, 0);
             }
         }
         else if (mode == Mode.Opposite)
         {
             if (Input.GetKey(KeyCode.A))
             {
-                tfWhite.position += new Vector3(1, 0, 0) * whiteSpeed * Time.deltaTime;
+                //tfWhite.position += new Vector3(1, 0, 0) * whiteSpeed * Time.deltaTime;
+                rbWhite.velocity = new Vector3(1 * whiteSpeed, 0, 0);
             }
-            if (Input.GetKey(KeyCode.D))
+            else if (Input.GetKey(KeyCode.D))
             {
-                tfWhite.position += new Vector3(-1, 0, 0) * whiteSpeed * Time.deltaTime;
+                //tfWhite.position += new Vector3(-1, 0, 0) * whiteSpeed * Time.deltaTime;
+                rbWhite.velocity = new Vector3(-1 * whiteSpeed, 0, 0);
             }
-            if (Input.GetKey(KeyCode.W))
+            else if (Input.GetKey(KeyCode.W))
             {
-                tfWhite.position += new Vector3(0, 0, -1) * whiteSpeed * Time.deltaTime;
+                //tfWhite.position += new Vector3(0, 0, -1) * whiteSpeed * Time.deltaTime;
+                rbWhite.velocity = new Vector3(0, 0, -1 * whiteSpeed);
             }
-            if (Input.GetKey(KeyCode.S))
+            else if (Input.GetKey(KeyCode.S))
             {
-                tfWhite.position += new Vector3(0, 0, 1) * whiteSpeed * Time.deltaTime;
+                //tfWhite.position += new Vector3(0, 0, 1) * whiteSpeed * Time.deltaTime;
+                rbWhite.velocity = new Vector3(0, 0, 1 * whiteSpeed);
+            }
+            else
+            {
+                rbWhite.velocity = new Vector3(0, 0, 0);
             }
         }
     }
@@ -158,5 +190,7 @@ public class Controller : MonoBehaviour {
     public void DisableControls()
     {
         controlsActive = false;
+        rbWhite.velocity = new Vector3(0, 0, 0);
+        rbBlack.velocity = new Vector3(0, 0, 0);
     }
 }
