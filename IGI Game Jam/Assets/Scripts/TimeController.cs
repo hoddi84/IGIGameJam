@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TimeController : MonoBehaviour {
 
 
     private float endTime;
     private int timeLeft;
+    public float durationTime;
+    public string timeLeftText;
+    public string timeOverText;
 
     private Text text;
     public GameObject textTimer;
@@ -21,8 +25,9 @@ public class TimeController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+
         timeOver = false;
-        endTime = Time.time + 5.0f;
+        endTime = Time.time + durationTime;
         text = textTimer.GetComponent<Text>();
 
 	}
@@ -38,16 +43,25 @@ public class TimeController : MonoBehaviour {
             seconds = Mathf.FloorToInt(timeLeft - minutes * 60);
             printTime = string.Format("{0:0}:{1:00}", minutes, seconds);
 
-            text.text = "Time Left: " + printTime.ToString();
+            text.text = timeLeftText + ": " + printTime.ToString();
 
             if (timeLeft == 0)
             {
                 timeOver = true;
+                TimeOver();
             }
         }
-        else
-        {
-            text.text = "Time Over";
-        }
 	}
+
+    void TimeOver()
+    {
+        text.text = timeOverText;
+        StartCoroutine(GameOver());
+    }
+
+    IEnumerator GameOver()
+    {
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadScene("StartScreen");
+    }
 }
