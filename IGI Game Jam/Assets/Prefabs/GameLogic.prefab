@@ -341,6 +341,7 @@ MonoBehaviour:
   timeLeftText: Time Remaining
   timeOverText: Game Over
   textTimer: {fileID: 1581416701056252}
+  nextScene: 
 --- !u!114 &114328920813544766
 MonoBehaviour:
   m_ObjectHideFlags: 1

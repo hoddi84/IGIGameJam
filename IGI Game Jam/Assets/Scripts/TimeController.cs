@@ -22,6 +22,8 @@ public class TimeController : MonoBehaviour {
 
     private bool timeOver;
 
+    public string nextScene;
+
 	// Use this for initialization
 	void Start () {
 
@@ -62,7 +64,7 @@ public class TimeController : MonoBehaviour {
     IEnumerator GameOver()
     {
         yield return new WaitForSeconds(2.0f);
-        SceneManager.LoadScene("StartScreen");
+        SceneManager.LoadScene(nextScene);
     }
 
     public void GameWon(string msg)
