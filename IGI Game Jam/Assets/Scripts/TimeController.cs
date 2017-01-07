@@ -8,6 +8,7 @@ public class TimeController : MonoBehaviour {
 
 
     private float endTime;
+    private float startTime;
     private int timeLeft;
     public float durationTime;
     public string timeLeftText;
@@ -28,10 +29,9 @@ public class TimeController : MonoBehaviour {
 	void Start () {
 
 
-        timeOver = false;
+        timeOver = true; 
         endTime = Time.time + durationTime;
         text = textTimer.GetComponent<Text>();
-
 	}
 	
 	// Update is called once per frame
@@ -39,7 +39,7 @@ public class TimeController : MonoBehaviour {
 
         if (!timeOver)
         {
-            timeLeft = (int)(endTime - Time.time);
+            timeLeft = (int)(endTime - Time.time + startTime);
 
             minutes = Mathf.FloorToInt(timeLeft / 60F);
             seconds = Mathf.FloorToInt(timeLeft - minutes * 60);
@@ -52,6 +52,10 @@ public class TimeController : MonoBehaviour {
                 timeOver = true;
                 TimeOver();
             }
+        }
+        else
+        {
+            startTime += Time.deltaTime;
         }
 	}
 
@@ -82,5 +86,10 @@ public class TimeController : MonoBehaviour {
     public void DecreaseTime(int time)
     {
         endTime -= time;
+    }
+
+    public void StartGame()
+    {
+        timeOver = false;
     }
 }
