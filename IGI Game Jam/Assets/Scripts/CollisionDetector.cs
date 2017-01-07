@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class CollisionDetector : MonoBehaviour {
 
-    public GameObject gameController;
     private TimeController timeController;
     private Controller controller;
 
 	// Use this for initialization
 	void Start () {
 
-        timeController = gameController.GetComponent<TimeController>();
-        controller = gameController.GetComponent<Controller>();
+        timeController = GameObject.Find("GameController").GetComponent<TimeController>();
+        controller = GameObject.Find("GameController").GetComponent<Controller>();
 	}
 	
 	// Update is called once per frame
