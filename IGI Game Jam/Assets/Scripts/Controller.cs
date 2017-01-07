@@ -23,6 +23,8 @@ public class Controller : MonoBehaviour {
 
     private bool controlsActive;
 
+    private bool canStartGame;
+
     private enum Mode
     {
         Normal,
@@ -97,23 +99,23 @@ public class Controller : MonoBehaviour {
         {
             if (Input.GetKey(KeyCode.A))
             {
-                //tfBlack.position += new Vector3(-1, 0, 0) * blackSpeed * Time.deltaTime;
                 rbBlack.velocity = new Vector3(-1 * blackSpeed, 0, 0);
+                timeController.StartGame();
             }
             else if (Input.GetKey(KeyCode.D))
             {
-                //tfBlack.position += new Vector3(1, 0, 0) * blackSpeed * Time.deltaTime;
                 rbBlack.velocity = new Vector3(1 * blackSpeed, 0, 0);
+                timeController.StartGame();
             }
             else if (Input.GetKey(KeyCode.W))
             {
-                //tfBlack.position += new Vector3(0, 0, 1) * blackSpeed * Time.deltaTime;
                 rbBlack.velocity = new Vector3(0, 0, 1 * blackSpeed);
+                timeController.StartGame();
             }
             else if (Input.GetKey(KeyCode.S))
             {
-                //tfBlack.position += new Vector3(0, 0, -1) * blackSpeed * Time.deltaTime;
                 rbBlack.velocity = new Vector3(0, 0, -1 * blackSpeed);
+                timeController.StartGame();
             }
             else
             {
@@ -124,23 +126,23 @@ public class Controller : MonoBehaviour {
         {
             if (Input.GetKey(KeyCode.A))
             {
-                //tfBlack.position += new Vector3(1, 0, 0) * blackSpeed * Time.deltaTime;
                 rbBlack.velocity = new Vector3(1 * blackSpeed, 0, 0);
+                timeController.StartGame();
             }
             else if (Input.GetKey(KeyCode.D))
             {
-                //tfBlack.position += new Vector3(-1, 0, 0) * blackSpeed * Time.deltaTime;
                 rbBlack.velocity = new Vector3(-1 * blackSpeed, 0, 0);
+                timeController.StartGame();
             }
             else if (Input.GetKey(KeyCode.W))
             {
-                //tfBlack.position += new Vector3(0, 0, -1) * blackSpeed * Time.deltaTime;
                 rbBlack.velocity = new Vector3(0, 0, -1 * blackSpeed);
+                timeController.StartGame();
             }
             else if (Input.GetKey(KeyCode.S))
             {
-                //tfBlack.position += new Vector3(0, 0, 1) * blackSpeed * Time.deltaTime;
                 rbBlack.velocity = new Vector3(0, 0, 1 * blackSpeed);
+                timeController.StartGame();
             }
             else
             {
@@ -155,23 +157,23 @@ public class Controller : MonoBehaviour {
         {
             if (Input.GetKey(KeyCode.A))
             {
-                //tfWhite.position += new Vector3(-1, 0, 0) * whiteSpeed * Time.deltaTime;
                 rbWhite.velocity = new Vector3(-1 * whiteSpeed, 0, 0);
+                timeController.StartGame();
             }
             else if (Input.GetKey(KeyCode.D))
             {
-                //tfWhite.position += new Vector3(1, 0, 0) * whiteSpeed * Time.deltaTime;
                 rbWhite.velocity = new Vector3(1 * whiteSpeed, 0, 0);
+                timeController.StartGame();
             }
             else if (Input.GetKey(KeyCode.W))
             {
-                //tfWhite.position += new Vector3(0, 0, 1) * whiteSpeed * Time.deltaTime;
                 rbWhite.velocity = new Vector3(0, 0, 1 * whiteSpeed);
+                timeController.StartGame();
             }
             else if (Input.GetKey(KeyCode.S))
             {
-                //tfWhite.position += new Vector3(0, 0, -1) * whiteSpeed * Time.deltaTime;
                 rbWhite.velocity = new Vector3(0, 0, -1 * whiteSpeed);
+                timeController.StartGame();
             }
             else
             {
@@ -182,23 +184,23 @@ public class Controller : MonoBehaviour {
         {
             if (Input.GetKey(KeyCode.A))
             {
-                //tfWhite.position += new Vector3(1, 0, 0) * whiteSpeed * Time.deltaTime;
                 rbWhite.velocity = new Vector3(1 * whiteSpeed, 0, 0);
+                timeController.StartGame();
             }
             else if (Input.GetKey(KeyCode.D))
             {
-                //tfWhite.position += new Vector3(-1, 0, 0) * whiteSpeed * Time.deltaTime;
                 rbWhite.velocity = new Vector3(-1 * whiteSpeed, 0, 0);
+                timeController.StartGame();
             }
             else if (Input.GetKey(KeyCode.W))
             {
-                //tfWhite.position += new Vector3(0, 0, -1) * whiteSpeed * Time.deltaTime;
                 rbWhite.velocity = new Vector3(0, 0, -1 * whiteSpeed);
+                timeController.StartGame();
             }
             else if (Input.GetKey(KeyCode.S))
             {
-                //tfWhite.position += new Vector3(0, 0, 1) * whiteSpeed * Time.deltaTime;
                 rbWhite.velocity = new Vector3(0, 0, 1 * whiteSpeed);
+                timeController.StartGame();
             }
             else
             {
