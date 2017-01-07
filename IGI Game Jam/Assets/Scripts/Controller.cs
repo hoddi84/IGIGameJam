@@ -7,6 +7,8 @@ public class Controller : MonoBehaviour {
     public GameObject blackPlayer;
     public GameObject whitePlayer;
 
+    private TimeController timeController;
+
     private Rigidbody rbBlack;
     private Rigidbody rbWhite;
 
@@ -33,6 +35,8 @@ public class Controller : MonoBehaviour {
         controlWhite = true;
         controlBoth = true;
         controlsActive = true;
+
+        timeController = gameObject.GetComponent<TimeController>();
 
         rbBlack = blackPlayer.GetComponent<Rigidbody>();
         rbWhite = whitePlayer.GetComponent<Rigidbody>();

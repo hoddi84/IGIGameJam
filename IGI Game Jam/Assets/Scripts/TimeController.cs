@@ -28,7 +28,7 @@ public class TimeController : MonoBehaviour {
 	void Start () {
 
 
-        timeOver = false;
+        timeOver = true; ;
         endTime = Time.time + durationTime;
         text = textTimer.GetComponent<Text>();
 
@@ -82,5 +82,10 @@ public class TimeController : MonoBehaviour {
     public void DecreaseTime(int time)
     {
         endTime -= time;
+    }
+
+    public void StartGame()
+    {
+        timeOver = false;
     }
 }
