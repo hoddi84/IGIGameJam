@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TimeController : MonoBehaviour {
 
@@ -23,6 +24,7 @@ public class TimeController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
 
         timeOver = false;
         endTime = Time.time + durationTime;
@@ -54,5 +56,12 @@ public class TimeController : MonoBehaviour {
     void TimeOver()
     {
         text.text = timeOverText;
+        StartCoroutine(GameOver());
+    }
+
+    IEnumerator GameOver()
+    {
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadScene("StartScreen");
     }
 }
