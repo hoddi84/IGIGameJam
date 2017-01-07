@@ -12,6 +12,7 @@ TagManager:
   - BlackPlayer
   - BluePlayer
   - GoldPlayer
+  - OuterWall
   layers:
   - Default
   - TransparentFX
