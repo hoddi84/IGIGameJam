@@ -5,6 +5,7 @@ using UnityEngine;
 public class ExploderController : MonoBehaviour {
 
     private List<GameObject> list;
+    private int amountOfExplosions;
     public GameObject prefabExplosion;
     private GameObject destroyedExplosion;
 
@@ -12,6 +13,7 @@ public class ExploderController : MonoBehaviour {
     void Awake ()
     {
         list = new List<GameObject>();
+        amountOfExplosions = 0;
     }
 
 	void Start ()
@@ -22,7 +24,7 @@ public class ExploderController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && amountOfExplosions > 0)
         {
             DestroyList();
         }
@@ -65,5 +67,25 @@ public class ExploderController : MonoBehaviour {
                 Destroy(destroyedExplosion,1);
             } 
         }
+        amountOfExplosions -= 1;
+    }
+
+    public void PickUpExplosion()
+    {
+        amountOfExplosions++;
+    }
+
+    public void ReduceExplosions()
+    {
+        amountOfExplosions--;
+        if (amountOfExplosions < 0)
+        {
+            amountOfExplosions = 0;
+        }
+    }
+
+    public int GetExplosionAmount()
+    {
+        return amountOfExplosions;
     }
 }
