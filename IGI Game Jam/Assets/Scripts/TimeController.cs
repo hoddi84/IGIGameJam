@@ -71,6 +71,10 @@ public class TimeController : MonoBehaviour {
     IEnumerator GameOver()
     {
         yield return new WaitForSeconds(2.0f);
+        if (SceneManager.GetActiveScene().name == "jinfirst")
+        {
+            SceneManager.LoadScene("jinfirst");
+        }
         if (SceneManager.GetActiveScene().name == "jinjang")
         {
             SceneManager.LoadScene("jinjang");
@@ -78,12 +82,16 @@ public class TimeController : MonoBehaviour {
         if (SceneManager.GetActiveScene().name == "jinjang3")
         {
             SceneManager.LoadScene("jinjang3");
-        }  
+        }
     }
 
     IEnumerator NextLevel()
     {
         yield return new WaitForSeconds(2.0f);
+        if (SceneManager.GetActiveScene().name == "jinfirst")
+        {
+            SceneManager.LoadScene("jinjang");
+        }
         if (SceneManager.GetActiveScene().name == "jinjang")
         {
             SceneManager.LoadScene("jinjang3");

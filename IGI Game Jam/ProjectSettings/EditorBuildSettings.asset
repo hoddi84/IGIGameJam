@@ -15,3 +15,5 @@ EditorBuildSettings:
     path: Assets/Scenes/jinjang3.unity
   - enabled: 1
     path: Assets/Scenes/jinjang4.unity
+  - enabled: 1
+    path: Assets/Scenes/jinfirst.unity
