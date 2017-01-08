@@ -13,6 +13,7 @@ TagManager:
   - BluePlayer
   - GoldPlayer
   - OuterWall
+  - Obstacle
   layers:
   - Default
   - TransparentFX

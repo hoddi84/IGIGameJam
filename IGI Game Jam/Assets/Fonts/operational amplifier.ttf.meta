@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: bca0b87f0ca0de14cb4eb36674684a0e
+timeCreated: 1483829653
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Operational Amplifier
+  fontNames:
+  - Operational Amplifier
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
