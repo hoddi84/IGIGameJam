@@ -8,12 +8,14 @@ public class ExploderController : MonoBehaviour {
     private int amountOfExplosions;
     public GameObject prefabExplosion;
     private GameObject destroyedExplosion;
+    private AudioController audioController;
 
 	// Use this for initialization
     void Awake ()
     {
         list = new List<GameObject>();
         amountOfExplosions = 0;
+        audioController = GameObject.Find("AudioClips").GetComponent<AudioController>();
     }
 
 	void Start ()
@@ -27,6 +29,7 @@ public class ExploderController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Q) && amountOfExplosions > 0)
         {
             DestroyList();
+            audioController.PlayExplosion();
         }
 	}
 
