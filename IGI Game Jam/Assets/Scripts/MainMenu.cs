@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour {
         if (isStart)
         {
             //Application.LoadLevel("jinjang");
-            SceneManager.LoadScene("jinjang");
+            SceneManager.LoadScene("jinfirst");
         }
         if (isQuit)
         {
