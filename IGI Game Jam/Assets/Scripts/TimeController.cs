@@ -71,14 +71,34 @@ public class TimeController : MonoBehaviour {
     IEnumerator GameOver()
     {
         yield return new WaitForSeconds(2.0f);
-        SceneManager.LoadScene(nextScene);
+        if (SceneManager.GetActiveScene().name == "jinjang")
+        {
+            SceneManager.LoadScene("jinjang");
+        }
+        if (SceneManager.GetActiveScene().name == "jinjang3")
+        {
+            SceneManager.LoadScene("jinjang3");
+        }  
+    }
+
+    IEnumerator NextLevel()
+    {
+        yield return new WaitForSeconds(2.0f);
+        if (SceneManager.GetActiveScene().name == "jinjang")
+        {
+            SceneManager.LoadScene("jinjang3");
+        }
+        if (SceneManager.GetActiveScene().name == "jinjang3")
+        {
+            SceneManager.LoadScene("StartScreen");
+        } 
     }
 
     public void GameWon(string msg)
     {
         timeOver = true;
         text.text = msg;
-        StartCoroutine(GameOver());
+        StartCoroutine(NextLevel());
     }
 
     public void IncreaseTime(int time)
