@@ -16,6 +16,7 @@ public class TimeController : MonoBehaviour {
 
     private Text text;
     public GameObject textTimer;
+    private Controller controller;
 
     private int minutes;
     private int seconds;
@@ -32,6 +33,7 @@ public class TimeController : MonoBehaviour {
         timeOver = true; 
         endTime = Time.time + durationTime;
         text = textTimer.GetComponent<Text>();
+        controller = GetComponent<Controller>();
 	}
 	
 	// Update is called once per frame
@@ -62,6 +64,7 @@ public class TimeController : MonoBehaviour {
     void TimeOver()
     {
         text.text = timeOverText;
+        controller.DisableControls();
         StartCoroutine(GameOver());
     }
 

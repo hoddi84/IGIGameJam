@@ -9,5 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScreen.unity
   - enabled: 1
     path: Assets/Scenes/jinjang.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/jinjang2.unity
+  - enabled: 1
+    path: Assets/Scenes/jinjang3.unity
+  - enabled: 1
+    path: Assets/Scenes/jinjang4.unity
