@@ -36,7 +36,8 @@ public class ExplosionBoost : MonoBehaviour
         }
         else if (other.gameObject.tag == "WhitePlayer" && !controller.ControlingWhite())
         {
-            // something bad.
+            whiteExploController.ReduceExplosions();
+            blackExploController.ReduceExplosions();
             Destroy(gameObject);
         }
         if (other.gameObject.tag == "BlackPlayer" && !controller.ControlingWhite())
@@ -46,7 +47,8 @@ public class ExplosionBoost : MonoBehaviour
         }
         else if (other.gameObject.tag == "BlackPlayer" && controller.ControlingWhite())
         {
-            // something bad.
+            whiteExploController.ReduceExplosions();
+            blackExploController.ReduceExplosions();
             Destroy(gameObject);
         }
     }

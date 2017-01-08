@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Controller : MonoBehaviour {
 
@@ -17,6 +18,12 @@ public class Controller : MonoBehaviour {
 
     private Transform tfBlack;
     private Transform tfWhite;
+
+    private ExploderController whiteExploController;
+    private ExploderController blackExploController;
+
+    private Text explosionCount;
+    public string explosionText;
 
     public float whiteSpeed = 1.5f;
     public float blackSpeed = 1.5f;
@@ -52,7 +59,12 @@ public class Controller : MonoBehaviour {
         exploderWhite = whitePlayer.GetComponent<ExploderController>();
         exploderBlack = blackPlayer.GetComponent<ExploderController>();
 
+        explosionCount = GameObject.Find("NumberOfExplo").GetComponent<Text>();
+        whiteExploController = whitePlayer.GetComponent<ExploderController>();
+        blackExploController = blackPlayer.GetComponent<ExploderController>();
+
         ActivateExploder(controlWhite);
+        AmountOfExplosions(controlWhite);
 	}
 
     void Update()
@@ -74,6 +86,7 @@ public class Controller : MonoBehaviour {
         }
 
         ActivateExploder(controlWhite);
+        AmountOfExplosions(controlWhite);
     }
 
     void FixedUpdate()
@@ -249,6 +262,18 @@ public class Controller : MonoBehaviour {
         {
             exploderWhite.enabled = false;
             exploderBlack.enabled = true;
+        }
+    }
+
+    void AmountOfExplosions(bool whiteActive)
+    {
+        if (whiteActive)
+        {
+            explosionCount.text = explosionText + ":" + whiteExploController.GetExplosionAmount();
+        }
+        else
+        {
+            explosionCount.text = explosionText + ":" + blackExploController.GetExplosionAmount();
         }
     }
 }

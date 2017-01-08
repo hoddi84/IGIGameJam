@@ -74,4 +74,18 @@ public class ExploderController : MonoBehaviour {
     {
         amountOfExplosions++;
     }
+
+    public void ReduceExplosions()
+    {
+        amountOfExplosions--;
+        if (amountOfExplosions < 0)
+        {
+            amountOfExplosions = 0;
+        }
+    }
+
+    public int GetExplosionAmount()
+    {
+        return amountOfExplosions;
+    }
 }
