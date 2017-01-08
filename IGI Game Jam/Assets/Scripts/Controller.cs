@@ -35,6 +35,8 @@ public class Controller : MonoBehaviour {
 
     private bool canStartGame;
 
+    private bool switchEnabled;
+
     private enum Mode
     {
         Normal,
@@ -47,6 +49,8 @@ public class Controller : MonoBehaviour {
         controlWhite = true;
         controlBoth = true;
         controlsActive = true;
+
+        switchEnabled = false;
 
         timeController = gameObject.GetComponent<TimeController>();
 
@@ -69,19 +73,21 @@ public class Controller : MonoBehaviour {
 
     void Update()
     {
-
-        if (controlWhite)
+        if (switchEnabled)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (controlWhite)
             {
-                controlWhite = false;
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    controlWhite = false;
+                }
             }
-        }
-        else
-        {
-            if (Input.GetKeyDown(KeyCode.E))
+            else
             {
-                controlWhite = true;
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    controlWhite = true;
+                }
             }
         }
 

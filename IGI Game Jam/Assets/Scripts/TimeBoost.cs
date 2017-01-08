@@ -8,11 +8,14 @@ public class TimeBoost : MonoBehaviour {
     private TimeController timeController;
     private Controller controller;
 
+    private AudioController audioController;
+
 	// Use this for initialization
 	void Start () {
 
         timeController = GameObject.Find("GameController").GetComponent<TimeController>();
         controller = GameObject.Find("GameController").GetComponent<Controller>();
+        audioController = GameObject.Find("AudioClips").GetComponent<AudioController>();
 	}
 	
 	// Update is called once per frame
@@ -26,21 +29,25 @@ public class TimeBoost : MonoBehaviour {
         if (other.gameObject.tag == "WhitePlayer" && controller.ControlingWhite())
         {
             timeController.IncreaseTime(5);
+            audioController.PlayPowerUp();
             Destroy(gameObject);
         }
         else if (other.gameObject.tag == "WhitePlayer" && !controller.ControlingWhite())
         {
             timeController.DecreaseTime(5);
+            audioController.PlayBadPowerUp();
             Destroy(gameObject);
         }
         if (other.gameObject.tag == "BlackPlayer" && !controller.ControlingWhite())
         {
             timeController.IncreaseTime(5);
+            audioController.PlayPowerUp();
             Destroy(gameObject);
         }
         else if (other.gameObject.tag == "BlackPlayer" && controller.ControlingWhite())
         {
             timeController.DecreaseTime(5);
+            audioController.PlayBadPowerUp();
             Destroy(gameObject);
         }
     }

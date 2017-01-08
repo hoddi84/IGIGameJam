@@ -11,6 +11,8 @@ public class ExplosionBoost : MonoBehaviour
     private ExploderController whiteExploController;
     private ExploderController blackExploController;
 
+    private AudioController audioController;
+
     // Use this for initialization
     void Start()
     {
@@ -18,6 +20,8 @@ public class ExplosionBoost : MonoBehaviour
 
         whiteExploController = GameObject.Find("WhitePlayer").GetComponent<ExploderController>();
         blackExploController = GameObject.Find("BlackPlayer").GetComponent<ExploderController>();
+
+        audioController = GameObject.Find("AudioClips").GetComponent<AudioController>();
     }
 
     // Update is called once per frame
@@ -32,23 +36,27 @@ public class ExplosionBoost : MonoBehaviour
         if (other.gameObject.tag == "WhitePlayer" && controller.ControlingWhite())
         {
             whiteExploController.PickUpExplosion();
+            audioController.PlayPowerUp();
             Destroy(gameObject);
         }
         else if (other.gameObject.tag == "WhitePlayer" && !controller.ControlingWhite())
         {
             whiteExploController.ReduceExplosions();
             blackExploController.ReduceExplosions();
+            audioController.PlayBadPowerUp();
             Destroy(gameObject);
         }
         if (other.gameObject.tag == "BlackPlayer" && !controller.ControlingWhite())
         {
             blackExploController.PickUpExplosion();
+            audioController.PlayPowerUp();
             Destroy(gameObject);
         }
         else if (other.gameObject.tag == "BlackPlayer" && controller.ControlingWhite())
         {
             whiteExploController.ReduceExplosions();
             blackExploController.ReduceExplosions();
+            audioController.PlayBadPowerUp();
             Destroy(gameObject);
         }
     }
