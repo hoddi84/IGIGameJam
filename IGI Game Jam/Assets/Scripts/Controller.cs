@@ -9,6 +9,9 @@ public class Controller : MonoBehaviour {
 
     private TimeController timeController;
 
+    private ExploderController exploderWhite;
+    private ExploderController exploderBlack;
+
     private Rigidbody rbBlack;
     private Rigidbody rbWhite;
 
@@ -45,6 +48,11 @@ public class Controller : MonoBehaviour {
 
         tfBlack = blackPlayer.GetComponent<Transform>();
         tfWhite = whitePlayer.GetComponent<Transform>();
+
+        exploderWhite = whitePlayer.GetComponent<ExploderController>();
+        exploderBlack = blackPlayer.GetComponent<ExploderController>();
+
+        ActivateExploder(controlWhite);
 	}
 
     void Update()
@@ -64,6 +72,8 @@ public class Controller : MonoBehaviour {
                 controlWhite = true;
             }
         }
+
+        ActivateExploder(controlWhite);
     }
 
     void FixedUpdate()
@@ -225,6 +235,20 @@ public class Controller : MonoBehaviour {
         else
         {
             return false;
+        }
+    }
+
+    void ActivateExploder(bool whiteActive)
+    {
+        if (whiteActive)
+        {
+            exploderWhite.enabled = true;
+            exploderBlack.enabled = false;
+        }
+        else
+        {
+            exploderWhite.enabled = false;
+            exploderBlack.enabled = true;
         }
     }
 }
