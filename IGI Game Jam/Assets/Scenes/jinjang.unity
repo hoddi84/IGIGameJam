@@ -1946,7 +1946,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1084730456910882, guid: 05190a76f5cb0224788423703f4f4e68, type: 2}
       propertyPath: m_TagString
-      value: TimeBoost
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 05190a76f5cb0224788423703f4f4e68, type: 2}
